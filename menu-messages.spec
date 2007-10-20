@@ -1,5 +1,5 @@
 %define GTKMDKDATE	20060915
-%define MENUDATE  	20071004
+%define MENUDATE  	20071020
 
 Summary:	Localization files for Menu system
 Name:		menu-messages
