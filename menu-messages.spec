@@ -12,6 +12,7 @@ Source1:	gtk+mdk-%{GTKMDKDATE}.tar.bz2
 
 License:	GPL
 Group:		System/Base
+BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 Conflicts:	gtk+mdk =< 0.1.6-13mdk
 BuildRequires:	gettext
 Obsoletes:	mdk-menu-messages < 2008.1
