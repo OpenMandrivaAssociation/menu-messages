@@ -55,11 +55,5 @@ done
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post
-%update_menus
-
-%postun
-%clean_menus
-
 %files -f %{name}.lang
 %defattr(-,root,root,0755)
