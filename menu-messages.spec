@@ -31,13 +31,13 @@ as well as translations used by specifically added features.
 %build
 
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT%{_datadir}/locale
+rm -rf %{buildroot}
+mkdir -p %{buildroot}%{_datadir}/locale
 
 #make po_files
 for i in ./*.po
 do
-  langdir="$RPM_BUILD_ROOT%{_datadir}/locale/`basename ${i} .po`/LC_MESSAGES/"
+  langdir="%{buildroot}%{_datadir}/locale/`basename ${i} .po`/LC_MESSAGES/"
   mkdir -p ${langdir}
   msgfmt -o	${langdir}/menu-messages.mo ${i}
 done
@@ -45,7 +45,7 @@ done
 # gtk+mdk files
 for i in GtkMdkWidgets/*.po
 do
-  langdir="$RPM_BUILD_ROOT%{_datadir}/locale/`basename ${i} .po`/LC_MESSAGES/"
+  langdir="%{buildroot}%{_datadir}/locale/`basename ${i} .po`/LC_MESSAGES/"
   mkdir -p ${langdir}
   msgfmt -o	${langdir}/gtk+mdk.mo ${i}
 done
@@ -53,7 +53,7 @@ done
 %find_lang %{name} menu-messages gtk+mdk
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files -f %{name}.lang
 %defattr(-,root,root,0755)
