@@ -46,4 +46,4 @@ done
 %find_lang %{name}
 %find_lang gtk+mdk
 
-%files -f %{name}.lang,gtk+mdk.lang
+%files -f %{name}.lang -f gtk+mdk.lang
