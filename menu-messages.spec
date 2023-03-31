@@ -4,7 +4,7 @@
 Summary:	Localization files for Menu system
 Name:		menu-messages
 Version:	2011.0
-Release:	15
+Release:	16
 License:	GPL
 Group:		System/Base
 # fwang: see http://svn.mandriva.com/cgi-bin/viewvc.cgi/soft/menu-messages/trunk/
